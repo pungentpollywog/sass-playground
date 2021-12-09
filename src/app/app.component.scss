@@ -1,0 +1,33 @@
+@use "assets/sass/abstracts/mixins";
+@use "sass:color";
+
+$navLinkColor: #fafdfc;
+$navLinkAdjust: 200;
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  @include mixins.background-gradient();
+
+  button {
+    margin: 1rem;
+    border-radius: 5px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    li {
+      list-style-type: none;
+      padding: 0 1rem;
+      margin: 0 1rem;
+      a {
+        color: $navLinkColor;
+        text-decoration: none;
+        &:hover {
+          color: color.adjust($navLinkColor, $red: -$navLinkAdjust, $green: -$navLinkAdjust, $blue: -$navLinkAdjust);
+        }
+      }
+    }
+  }
+}

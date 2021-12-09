@@ -1,0 +1,8 @@
+@mixin background-gradient($angle: 270deg) {
+  background-image: linear-gradient(
+    $angle,
+    rgba(94, 114, 235, 1) 0%,
+    rgba(255, 145, 144, 1) 56%,
+    rgba(254, 193, 149, 1) 100%
+  );
+}

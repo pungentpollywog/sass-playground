@@ -1,0 +1,34 @@
+@use 'assets/sass/abstracts/variables';
+@use 'sass:math';
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: variables.$vp-height;
+
+  article {
+
+    // font-size: 0.25rem * 3;
+    // font-size: 0.75rem;
+
+    // This is invalid. (it's treated as a separator)...
+    // font-size: 1.5rem / 2;
+
+    // Use math.div() instead...
+    font-size: #{math.div(1.5, 2)}rem;
+
+    width: #{math.div(99, 2)}rem;
+
+    text-transform: uppercase;
+    text-align: justify;
+    font-family: "Open Sans Pro", sans-serif;
+    background: url(https://images.vexels.com/media/users/98/69456/preview2/3352561770a4f67be58d708950f2caaa-roger-federer-silhouette-head.jpg);
+    background-size: cover;
+
+    // Mask image over text...
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

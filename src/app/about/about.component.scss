@@ -1,0 +1,35 @@
+@use "assets/sass/abstracts/variables" as myvars;
+
+main {
+  padding-left: 5rem;
+  h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 48px;
+    color: myvars.$primary;
+  }
+  section.author {
+    width: 15rem;
+    p {
+      padding-left: 0.25rem;
+      font-size:  24px;
+    }
+
+    article {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-bottom: 0.5rem;
+    }
+    article.icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      padding: 0;
+      img {
+        height: 20px;
+      }
+    }
+
+  }
+}
