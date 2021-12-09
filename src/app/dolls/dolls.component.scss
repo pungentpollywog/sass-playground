@@ -1,0 +1,32 @@
+@use 'assets/sass/abstracts/variables';
+
+@mixin siblingSizer($count: 5) {
+  @for $i from 1 through $count {
+    &:nth-child(#{$i}) {
+      width: 5% * ($count + 1 - $i);
+      height: 5% * ($count + 1 - $i);
+    }
+  }
+}
+
+%default-doll-size {
+  width: 20%;
+  height: 20%;
+}
+
+main {
+  height: variables.$vp-height;
+  display: flex;
+  align-items: center;
+
+  article {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    img.doll {
+      @extend %default-doll-size;
+      // @include siblingSizer(5);
+    }
+  }
+}

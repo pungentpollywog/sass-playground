@@ -1,0 +1,30 @@
+@use 'assets/sass/abstracts/mixins';
+@use 'assets/sass/abstracts/variables';
+
+main {
+  height: variables.$vp-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Pacifico", cursive;
+  font-size: 64px;
+  background: #72b0eb;
+
+  h1 {
+    &.gradient {
+      @include mixins.background-gradient(90deg);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      animation: move 4s infinite;
+      padding: 1rem;
+    }
+  }
+}
+
+@keyframes move {
+  50% {
+    @include mixins.background-gradient(270deg);
+  }
+}
